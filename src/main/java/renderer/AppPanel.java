@@ -11,8 +11,10 @@ public class AppPanel extends JPanel implements Runnable, KeyListener {
 
     // dimensions
     public static final int SCALE = 1;
-    public static final int WIDTH = 1700;
-    public static final int HEIGHT = 1000;
+//    public static final int WIDTH = 1700;
+//    public static final int HEIGHT = 1000;
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 400;
 
     // game thread
     private Thread thread;
@@ -53,7 +55,7 @@ public class AppPanel extends JPanel implements Runnable, KeyListener {
 
         running = true;
 
-        appState = new AppState();
+        appState = new AppState(WIDTH, HEIGHT);
     }
 
     public void run() {

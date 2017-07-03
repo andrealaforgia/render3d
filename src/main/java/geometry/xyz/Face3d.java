@@ -8,4 +8,14 @@ public class Face3d {
         this.b = b;
         this.c = c;
     }
+
+    public interface Exporter {
+        void sendVertexes(Point3d a, Point3d b, Point3d c);
+        void export();
+    }
+
+    public void export(final Exporter exporter) {
+        exporter.sendVertexes(a, b, c);
+        exporter.export();
+    }
 }

@@ -4,13 +4,18 @@ import java.io.IOException;
 
 public class AppState {
 
+    private final int width;
+    private final int height;
+
     private State[] states;
     private int currentState;
 
     public static final int NUM_STATES = 1;
     public static final int RUNNING_STATE = 0;
 
-    public AppState() throws IOException {
+    public AppState(int width, int height) throws IOException {
+        this.width = width;
+        this.height = height;
         this.states = new State[NUM_STATES];
         this.currentState = RUNNING_STATE;
         loadState(currentState);
@@ -18,7 +23,7 @@ public class AppState {
 
     private void loadState(int state) throws IOException {
         if (state == RUNNING_STATE)
-            states[state] = new RunningState(this);
+            states[state] = new RunningState(this, width, height);
     }
 
     private void unloadState(int state) {
