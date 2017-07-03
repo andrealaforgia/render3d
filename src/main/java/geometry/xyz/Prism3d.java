@@ -47,10 +47,10 @@ public class Prism3d {
             }
             Point3d topPrevVertex = btmPrevVertex.newRelative(0, 0, +height);
             Point3d topCurrVertex = btmCurrVertex.newRelative(0, 0, +height);
-//            faces.add(new Face3d(btmCentre, btmPrevVertex, btmCurrVertex));
-//            faces.add(new Face3d(topCentre, topPrevVertex, topCurrVertex));
-            faces.add(new Face3d(btmPrevVertex, btmCurrVertex, topPrevVertex));
-            faces.add(new Face3d(btmCurrVertex, topCurrVertex, topPrevVertex));
+            faces.add(new Face3d(btmCentre, btmPrevVertex, btmCurrVertex));
+            faces.add(new Face3d(topCentre, topPrevVertex, topCurrVertex));
+            //faces.add(new Face3d(btmPrevVertex, btmCurrVertex, topPrevVertex));
+            //faces.add(new Face3d(btmCurrVertex, topCurrVertex, topPrevVertex));
             btmPrevVertex = btmCurrVertex;
         }
     }

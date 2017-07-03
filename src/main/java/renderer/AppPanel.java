@@ -13,8 +13,8 @@ public class AppPanel extends JPanel implements Runnable, KeyListener {
     public static final int SCALE = 1;
 //    public static final int WIDTH = 1700;
 //    public static final int HEIGHT = 1000;
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 400;
+    public static final int WIDTH = 1100;
+    public static final int HEIGHT = 600;
 
     // game thread
     private Thread thread;

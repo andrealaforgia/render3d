@@ -18,6 +18,8 @@ public class RunningState extends State {
     private final int height;
 
     Prism3d prism3d;
+    Prism3d prism3d_2;
+    Prism3d prism3d_3;
 
     public RunningState(AppState appState, int width, int height) throws IOException {
         this.width = width;
@@ -27,7 +29,9 @@ public class RunningState extends State {
     }
 
     public void init() throws IOException {
-        this.prism3d = new Prism3d(new Point3d(-50, -50, -200), 400, 100, 5);
+        this.prism3d = new Prism3d(new Point3d(0, 0, 0), 400, 200, 5);
+        this.prism3d_2 = new Prism3d(new Point3d(0, 450, 0), 400, 200, 5);
+        this.prism3d_3 = new Prism3d(new Point3d(0, -450, 0), 400, 200, 5);
     }
 
     public void update() throws IOException {
@@ -114,7 +118,9 @@ public class RunningState extends State {
             }
         };
 
-        prism3d.export(exporter);
+        //prism3d.export(exporter);
+        prism3d_2.export(exporter);
+        //prism3d_3.export(exporter);
     }
 
     public void keyPressed(int k) {

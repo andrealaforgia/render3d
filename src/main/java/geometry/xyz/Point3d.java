@@ -32,4 +32,13 @@ public class Point3d {
         projector.sendProjectedPoint2(new Point2d(y, y));
         projector.project();
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
+    }
 }
